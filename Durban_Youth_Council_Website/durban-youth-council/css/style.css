@@ -1,0 +1,369 @@
+/* ==========================================================================
+   Durban Youth Council — Stylesheet (css/style.css)
+   Linked from every page. Design tokens follow the Design Aesthetic section
+   of the project proposal (Reports/03-design-aesthetic.md).
+
+   Contents
+     1. Design tokens (CSS custom properties)
+     2. Reset and base typography
+     3. Buttons
+     4. Header and navigation (incl. mobile menu)
+     5. Hero and page headers
+     6. Sections, cards and images
+     7. Get-involved strip
+     8. Forms
+     9. Contact locations
+    10. Footer
+    11. Utilities (visually-hidden, skip link)
+   ========================================================================== */
+
+/* 1. Design tokens: colours, width and radius are defined once and reused with var(--name) */
+:root {
+  --charcoal: #1b1b1e;
+  --white: #ffffff;
+  --amber: #e8a33d;
+  --amber-dark: #c8842a;
+  --teal: #1f6f78;
+  --teal-dark: #164f56;
+  --grey: #6b6b6b;
+  --grey-light: #f4f4f4;
+  --border: #e2e2e2;
+  --max-width: 1100px;
+  --radius: 10px;
+}
+
+/* 2. Reset and base: removes browser default spacing so every browser starts equal;
+      box-sizing makes width include padding and border */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  color: var(--charcoal);
+  line-height: 1.6;
+  background: var(--white);
+}
+
+h1, h2, h3, h4 {
+  font-family: "Poppins", "Inter", Arial, sans-serif;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+h1 { font-size: clamp(2rem, 4vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 0.75rem; }
+h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+
+p { margin-bottom: 1rem; max-width: 65ch; }
+
+a { color: var(--teal); text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 2px;
+}
+
+img { max-width: 100%; display: block; }
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* 3. Buttons: .btn is the shared shape; -primary and -outline add the colour variants */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+}
+.btn-primary { background: var(--amber); color: var(--charcoal); }
+.btn-primary:hover { background: var(--amber-dark); text-decoration: none; }
+.btn-outline { background: transparent; border-color: var(--white); color: var(--white); }
+.btn-outline:hover { background: var(--white); color: var(--charcoal); text-decoration: none; }
+
+/* 4. Header / Navigation: sticky keeps the menu visible while scrolling;
+      flexbox puts the logo left and the links right */
+.site-header {
+  background: var(--charcoal);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--white);
+  letter-spacing: 0.02em;
+}
+.logo span { color: var(--amber); }
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+  align-items: center;
+}
+/* Fallback spacing for browsers/renderers without flexbox `gap` support */
+.main-nav ul li { margin-right: 1.75rem; }
+.main-nav ul li:last-child { margin-right: 0; }
+.main-nav a {
+  color: var(--white);
+  font-weight: 500;
+}
+.main-nav a:hover, .main-nav a[aria-current="page"] {
+  color: var(--amber);
+  text-decoration: none;
+}
+.nav-cta {
+  background: var(--amber);
+  color: var(--charcoal) !important;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius);
+}
+.nav-cta:hover { background: var(--amber-dark); }
+/* Keep charcoal text on the CTA button even when it's the active page
+   (otherwise the generic active-link amber colour makes the text
+   invisible against the button's own amber background). */
+.main-nav a.nav-cta[aria-current="page"] { color: var(--charcoal) !important; }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* Mobile breakpoint: below 720px the links collapse behind the hamburger button */
+@media (max-width: 720px) {
+  .nav-toggle { display: block; }
+  .main-nav {
+    display: none;
+    width: 100%;
+  }
+  .main-nav.open { display: block; }
+  .main-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+  .site-header .container { flex-wrap: wrap; }
+}
+
+/* 5. Hero: dark gradient banner on the home page */
+.hero {
+  background: linear-gradient(135deg, var(--charcoal) 0%, var(--teal-dark) 100%);
+  color: var(--white);
+  padding: 4.5rem 0;
+}
+.hero .container { max-width: 760px; text-align: left; }
+.hero p.lead { font-size: 1.15rem; color: #d8d8d8; }
+.hero .cta-row { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
+.cta-row > * { margin-right: 1rem; margin-bottom: 0.5rem; }
+.cta-row > *:last-child { margin-right: 0; }
+
+/* Page header: teal banner used on every page except Home */
+.page-header {
+  background: var(--teal);
+  color: var(--white);
+  padding: 3rem 0;
+}
+.page-header p { color: #e6f2f2; }
+
+/* 6. Sections: shared vertical spacing; .section-alt gives alternating grey bands.
+      card-grid uses auto-fit so cards wrap onto new rows without media queries */
+section { padding: 3.5rem 0; }
+.section-alt { background: var(--grey-light); }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+}
+.card .icon {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.placeholder-media {
+  background: repeating-linear-gradient(45deg, #eef4f4, #eef4f4 10px, #e4eded 10px, #e4eded 20px);
+  border: 1px dashed var(--teal);
+  border-radius: var(--radius);
+  color: var(--teal-dark);
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1rem;
+}
+
+/* 7. Get involved strip */
+.strip {
+  background: var(--amber);
+  color: var(--charcoal);
+  text-align: center;
+  padding: 2.5rem 0;
+}
+.strip h2 { margin-bottom: 0.5rem; }
+.strip .cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
+.strip .btn-outline { border-color: var(--charcoal); color: var(--charcoal); }
+.strip .btn-outline:hover { background: var(--charcoal); color: var(--white); }
+
+/* 8. Forms */
+.form-grid { display: grid; gap: 1.25rem; max-width: 640px; }
+label { display: block; font-weight: 600; margin-bottom: 0.4rem; }
+input, textarea, select {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+fieldset { border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; }
+legend { font-weight: 600; padding: 0 0.5rem; }
+.radio-row { display: flex; gap: 1.5rem; align-items: center; }
+.radio-row label { margin-right: 1.5rem; }
+.radio-row label:last-child { margin-right: 0; }
+.radio-row label { font-weight: 400; display: flex; gap: 0.4rem; align-items: center; margin: 0; }
+.form-note { font-size: 0.9rem; color: var(--grey); }
+
+/* 9. Contact locations */
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.location-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
+.map-embed {
+  border: 0;
+  width: 100%;
+  height: 220px;
+  border-radius: var(--radius);
+  margin-top: 0.75rem;
+}
+
+/* 10. Footer */
+.site-footer {
+  background: var(--charcoal);
+  color: #cfcfcf;
+  padding: 3rem 0 1.5rem;
+  margin-top: 2rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+.site-footer h3 { color: var(--white); font-size: 1rem; }
+.site-footer a { color: #cfcfcf; }
+.site-footer a:hover { color: var(--amber); }
+.social-links { display: flex; gap: 1rem; list-style: none; margin-top: 0.5rem; }
+.social-links li { margin-right: 1rem; }
+.social-links li:last-child { margin-right: 0; }
+.social-links a { font-weight: 600; }
+.footer-bottom {
+  border-top: 1px solid #3a3a3d;
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* 11. Utilities: visually-hidden hides content from sight but not from screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--amber);
+  color: var(--charcoal);
+  padding: 0.6rem 1rem;
+  z-index: 100;
+}
+.skip-link:focus { left: 0.5rem; top: 0.5rem; }
+
+/* ==========================================================================
+   Additions after Part 1 feedback (see CHANGELOG.md)
+   Basic rules so the new images, facts list and roles list display properly.
+   The full visual design is completed in Part 2.
+   ========================================================================== */
+
+/* Hero: text and illustration side by side on wide screens */
+.hero .hero-grid {
+  max-width: var(--max-width);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+}
+.hero-img { width: 100%; height: auto; border-radius: var(--radius); }
+
+/* Images inside cards and sections scale down but never overflow their container */
+.card-img, .section-img { width: 100%; height: auto; border-radius: var(--radius); margin-bottom: 1rem; }
+.section-img { max-width: 360px; }
+
+/* Figure with caption on the home page */
+.media-figure { margin-top: 1.5rem; max-width: 360px; }
+.media-figure img { width: 100%; height: auto; border-radius: var(--radius); }
+.media-figure figcaption { font-size: 0.9rem; color: var(--grey); margin-top: 0.5rem; }
+
+/* Facts list (definition list) on the home page */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.facts div { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; text-align: center; }
+.facts dt { font-size: 0.85rem; color: var(--grey); }
+.facts dd { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 1.4rem; color: var(--teal); }
+
+/* Simple bulleted list used for the leadership roles */
+.plain-list { margin: 0.5rem 0 1rem 1.25rem; max-width: 65ch; }
+
+/* Stack the hero on narrow screens */
+@media (max-width: 720px) {
+  .hero .hero-grid { grid-template-columns: 1fr; }
+}

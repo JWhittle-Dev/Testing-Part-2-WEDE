@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="t d">
+  <title id="t">Location pin illustration</title>
+  <desc id="d">A map pin marking a Durban Youth Council venue.</desc>
+  <rect width="400" height="260" rx="14" fill="#1f6f78"/>
+  <circle cx="200" cy="130" r="82" fill="#ffffff" opacity=".9"/>
+  <path d="M200 190c-30-38-46-60-46-84a46 46 0 0 1 92 0c0 24-16 46-46 84z" fill="#e8a33d" stroke="#1b1b1e" stroke-width="5"/><circle cx="200" cy="106" r="16" fill="#1b1b1e"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="t d">
+  <title id="t">Charity partnerships illustration</title>
+  <desc id="d">A heart held in two open hands representing volunteer days with local charities.</desc>
+  <rect width="400" height="260" rx="14" fill="#c8842a"/>
+  <circle cx="200" cy="130" r="82" fill="#ffffff" opacity=".9"/>
+  <path d="M200 168c-40-26-52-48-52-64a26 26 0 0 1 52-6a26 26 0 0 1 52 6c0 16-12 38-52 64z" fill="#c8842a" stroke="#1b1b1e" stroke-width="5" stroke-linejoin="round"/><path d="M140 176q20 28 60 28t60-28" fill="none" stroke="#1f6f78" stroke-width="9" stroke-linecap="round"/>
+</svg>

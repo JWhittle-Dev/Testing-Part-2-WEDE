@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport tag: makes the layout scale to the device width on phones/tablets -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer or Sponsor | Durban Youth Council</title>
+  <meta name="description" content="Register your interest in volunteering with or sponsoring Durban Youth Council.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <!-- Single external stylesheet shared by every page -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- Skip link: hidden until focused; lets keyboard and screen-reader users jump past the menu -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!--HEADER / NAVIGATION-->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">Durban <span>Youth</span> Council</a>
+      <!-- Hamburger button: shown on small screens only; js/script.js toggles the .open class on the nav -->
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+      <!-- Primary navigation: aria-current="page" marks the page the visitor is on -->
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Programmes</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiry.html" class="nav-cta" aria-current="page">Volunteer / Sponsor</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN: the unique content of this page. id matches the skip link target -->
+  <main id="main-content">
+
+    <section class="page-header">
+      <div class="container">
+        <h1>Volunteer or Sponsor</h1>
+        <p>Tell us how you'd like to get involved and a DYC coordinator will be in touch.</p>
+      </div>
+    </section>
+
+    <!--ENQUIRY FORM
+         Since DYC is a non-profit, this form lets a visitor indicate whether
+         they want to be a VOLUNTEER or become a SPONSOR. -->
+    <section>
+      <div class="container">
+        <!-- novalidate turns off the browser's default pop-ups so js/script.js can show our own accessible messages -->
+        <form id="enquiry-form" novalidate>
+
+          <div class="form-grid">
+
+            <div>
+              <label for="full-name">Full name</label>
+              <input type="text" id="full-name" name="full-name" autocomplete="name" required>
+            </div>
+
+            <div>
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+
+            <div>
+              <label for="phone">Phone number (optional)</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </div>
+
+            <!-- fieldset + legend group the two radio buttons so screen readers announce the question once -->
+            <fieldset>
+              <legend>I would like to:</legend>
+              <div class="radio-row">
+                <label><input type="radio" name="interest" value="volunteer" required> Volunteer</label>
+                <label><input type="radio" name="interest" value="sponsor"> Become a sponsor</label>
+              </div>
+            </fieldset>
+
+            <div>
+              <label for="message">Tell us a bit more</label>
+              <textarea id="message" name="message" rows="5"
+                placeholder="E.g. which programme interests you, or what kind of sponsorship you have in mind"></textarea>
+            </div>
+
+            <div>
+              <button type="submit" class="btn btn-primary">Submit enquiry</button>
+              <!-- Feedback area: filled by js/script.js; aria-live makes screen readers announce the message -->
+              <p class="form-note" id="form-feedback" aria-live="polite"></p>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!--FOOTER-->
+  <footer class="site-footer">
+    <!-- Footer grid: organisation blurb, quick links and contact/social details (same on every page) -->
+    <div class="container footer-grid">
+      <div>
+        <h3>Durban Youth Council</h3>
+        <p>An all-volunteer non-profit serving Durban's youth since 1966.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Programmes</a></li>
+          <li><a href="enquiry.html">Volunteer / Sponsor</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <p>info@durbanyouthcouncil.co.za</p>
+        <ul class="social-links">
+          <li><a href="#" aria-label="Durban Youth Council on Facebook">Facebook</a></li>
+          <li><a href="#" aria-label="Durban Youth Council on Instagram">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 Durban Youth Council. All rights reserved.</p>
+  </footer>
+
+  <!-- Script is loaded last so the page content is parsed before it runs -->
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport tag: makes the layout scale to the device width on phones/tablets -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Durban Youth Council</title>
+  <meta name="description" content="Learn about Durban Youth Council's history since 1966, our mission, vision and the volunteers who lead our work.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <!-- Single external stylesheet shared by every page -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- Skip link: hidden until focused; lets keyboard and screen-reader users jump past the menu -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!--HEADER / NAVIGATION-->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">Durban <span>Youth</span> Council</a>
+      <!-- Hamburger button: shown on small screens only; js/script.js toggles the .open class on the nav -->
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+      <!-- Primary navigation: aria-current="page" marks the page the visitor is on -->
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About Us</a></li>
+          <li><a href="services.html">Programmes</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiry.html" class="nav-cta">Volunteer / Sponsor</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN: the unique content of this page. id matches the skip link target -->
+  <main id="main-content">
+
+    <section class="page-header">
+      <div class="container">
+        <h1>About Durban Youth Council</h1>
+        <p>Sixty years of young people showing up for their city.</p>
+      </div>
+    </section>
+
+    <!--HISTORY: founding story (source: Wikipedia, see Content_Research_and_Sourcing/sources.md)-->
+    <section>
+      <div class="container">
+        <h2>Our History</h2>
+        <!-- Image sits above the text; alt text describes its purpose for screen-reader users -->
+        <img class="section-img" src="images/about-history.svg" width="400" height="260" loading="lazy"
+             alt="Calendar page showing the year 1966, the year Durban Youth Council was founded">
+        <p>Durban Youth Council (DYC) was established in 1966, originally launched as a project of Junior
+          Chamber International South Africa's Durban chapter. What began as a small group of young
+          volunteers has grown into one of Durban's longest-running youth service organisations, built
+          entirely on the time and energy its members give freely.</p>
+        <p>Today DYC continues that same tradition: ordinary young Durbanites giving their weekends to
+          causes that need extra hands, from classrooms to care homes.</p>
+      </div>
+    </section>
+
+    <!--MISSION & VISION-->
+    <section class="section-alt">
+      <div class="container">
+        <h2>Mission &amp; Vision</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Our Mission</h3>
+            <p>To empower the youth of Durban through direct community service, working hand-in-hand with
+              local charities and under-resourced schools.</p>
+          </article>
+          <article class="card">
+            <h3>Our Vision</h3>
+            <p>A Durban where every young person has both the opportunity to serve their community and the
+              support of one when they need it.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!--LEADERSHIP-->
+    <section>
+      <div class="container">
+        <h2>Leadership</h2>
+        <p>DYC is run by a volunteer management committee elected by its members each year, supported by
+          programme coordinators for schools, charity partnerships and youth leadership training.</p>
+        <p>All committee members and coordinators are volunteers themselves, giving their time to ensure
+          that DYC continues to run smoothly and serve the Durban community.</p>
+        <!-- Roles list: ul is used because the order of the roles is not important -->
+        <h3>Volunteer roles</h3>
+        <ul class="plain-list">
+          <li><strong>Management committee</strong> &ndash; elected annually; sets direction and oversees finances.</li>
+          <li><strong>Programme coordinators</strong> &ndash; plan school, charity and leadership activities.</li>
+          <li><strong>Volunteers</strong> &ndash; young Durbanites who give weekends to DYC projects.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!--FOOTER-->
+  <footer class="site-footer">
+    <!-- Footer grid: organisation blurb, quick links and contact/social details (same on every page) -->
+    <div class="container footer-grid">
+      <div>
+        <h3>Durban Youth Council</h3>
+        <p>An all-volunteer non-profit serving Durban's youth since 1966.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Programmes</a></li>
+          <li><a href="enquiry.html">Volunteer / Sponsor</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <p>info@durbanyouthcouncil.co.za</p>
+        <ul class="social-links">
+          <li><a href="#" aria-label="Durban Youth Council on Facebook">Facebook</a></li>
+          <li><a href="#" aria-label="Durban Youth Council on Instagram">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 Durban Youth Council. All rights reserved.</p>
+  </footer>
+
+  <!-- Script is loaded last so the page content is parsed before it runs -->
+  <script src="js/script.js"></script>
+</body>
+</html>

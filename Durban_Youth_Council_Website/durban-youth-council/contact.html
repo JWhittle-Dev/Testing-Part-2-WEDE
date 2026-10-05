@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport tag: makes the layout scale to the device width on phones/tablets -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Durban Youth Council</title>
+  <meta name="description" content="Get in touch with Durban Youth Council at our main office or community outreach venue.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <!-- Single external stylesheet shared by every page -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- Skip link: hidden until focused; lets keyboard and screen-reader users jump past the menu -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!--HEADER / NAVIGATION-->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">Durban <span>Youth</span> Council</a>
+      <!-- Hamburger button: shown on small screens only; js/script.js toggles the .open class on the nav -->
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+      <!-- Primary navigation: aria-current="page" marks the page the visitor is on -->
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Programmes</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="enquiry.html" class="nav-cta">Volunteer / Sponsor</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN: the unique content of this page. id matches the skip link target -->
+  <main id="main-content">
+
+    <section class="page-header">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>Reach us at our main office, or find us at our community outreach venue.</p>
+      </div>
+    </section>
+
+    <!--LOCATIONS -->
+    <section>
+      <div class="container">
+
+        <div class="location-grid">
+
+          <article class="location-card">
+            <img class="section-img" src="images/contact-map-pin.svg" width="400" height="260" loading="lazy"
+                 alt="Illustration of a map pin marking the DYC main office">
+            <h2>Main Office</h2>
+            <address>
+              Durban Youth Council<br>
+              Berea, Durban, 4001<br>
+              KwaZulu-Natal, South Africa
+            </address>
+            <p>Email: <a href="mailto:info@durbanyouthcouncil.co.za">info@durbanyouthcouncil.co.za</a></p>
+            <p class="form-note">Address shown is suggestive — confirm the exact office address with DYC
+              before this site goes live.</p>
+            <!-- Embedded map — replace the query in the src URL with the confirmed address -->
+            <iframe class="map-embed" title="Map showing the DYC main office in Berea, Durban"
+              src="https://www.google.com/maps?q=Berea,+Durban&output=embed" loading="lazy"></iframe>
+          </article>
+
+          <article class="location-card">
+            <h2>Community Outreach Venue</h2>
+            <address>
+              Durban Youth Council — Outreach<br>
+              Sydenham Community Hall<br>
+              Sydenham, Durban, 4091<br>
+              KwaZulu-Natal, South Africa
+            </address>
+            <p>Used for weekend tutoring sessions and volunteer briefings.</p>
+            <p class="form-note">Venue shown is suggestive — confirm the current outreach venue with DYC
+              before this site goes live.</p>
+            <iframe class="map-embed" title="Map showing the DYC community outreach venue in Sydenham, Durban"
+              src="https://www.google.com/maps?q=Sydenham,+Durban&output=embed" loading="lazy"></iframe>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!--CONTACT FORM-->
+    <section class="section-alt">
+      <div class="container">
+        <h2>Send us a message</h2>
+        <!-- Contact form: validated by js/script.js (name, valid email, message). No server exists yet, so nothing is sent -->
+        <form id="contact-form" novalidate>
+          <div class="form-grid">
+            <div>
+              <label for="c-name">Full name</label>
+              <input type="text" id="c-name" name="c-name" autocomplete="name" required>
+            </div>
+            <div>
+              <label for="c-email">Email address</label>
+              <input type="email" id="c-email" name="c-email" autocomplete="email" required>
+            </div>
+            <div>
+              <label for="c-message">Message</label>
+              <textarea id="c-message" name="c-message" rows="5" required></textarea>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-primary">Send message</button>
+              <!-- Feedback area for the contact form (announced to screen readers via aria-live) -->
+              <p class="form-note" id="contact-feedback" aria-live="polite"></p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!--FOOTER-->
+  <footer class="site-footer">
+    <!-- Footer grid: organisation blurb, quick links and contact/social details (same on every page) -->
+    <div class="container footer-grid">
+      <div>
+        <h3>Durban Youth Council</h3>
+        <p>An all-volunteer non-profit serving Durban's youth since 1966.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Programmes</a></li>
+          <li><a href="enquiry.html">Volunteer / Sponsor</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <p>info@durbanyouthcouncil.co.za</p>
+        <ul class="social-links">
+          <li><a href="#" aria-label="Durban Youth Council on Facebook">Facebook</a></li>
+          <li><a href="#" aria-label="Durban Youth Council on Instagram">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 Durban Youth Council. All rights reserved.</p>
+  </footer>
+
+  <!-- Script is loaded last so the page content is parsed before it runs -->
+  <script src="js/script.js"></script>
+</body>
+</html>

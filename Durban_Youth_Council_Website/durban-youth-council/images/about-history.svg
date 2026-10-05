@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="t d">
+  <title id="t">Durban Youth Council history illustration</title>
+  <desc id="d">A calendar page marked 1966 representing the council's founding year.</desc>
+  <rect width="400" height="260" rx="14" fill="#1b1b1e"/>
+  <circle cx="200" cy="130" r="82" fill="#ffffff" opacity=".9"/>
+  <rect x="145" y="85" width="110" height="100" rx="10" fill="#fff" stroke="#1b1b1e" stroke-width="5"/><rect x="145" y="85" width="110" height="28" rx="10" fill="#e8a33d" stroke="#1b1b1e" stroke-width="5"/><text x="200" y="161" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="30" fill="#1b1b1e">1966</text>
+</svg>

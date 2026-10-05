@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" role="img" aria-labelledby="t d">
+  <title id="t">Illustration of young volunteers standing together</title>
+  <desc id="d">Five stylised volunteers in teal and amber shirts stand in front of the Durban skyline and a rising sun.</desc>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#164f56"/><stop offset="1" stop-color="#1f6f78"/></linearGradient></defs>
+  <rect width="600" height="380" rx="18" fill="url(#sky)"/>
+  <circle cx="470" cy="150" r="58" fill="#e8a33d" opacity=".95"/>
+  <g fill="#123c42"><rect x="40" y="200" width="40" height="120"/><rect x="90" y="170" width="34" height="150"/><rect x="132" y="215" width="50" height="105"/><rect x="420" y="205" width="44" height="115"/><rect x="474" y="185" width="36" height="135"/><rect x="520" y="220" width="46" height="100"/></g>
+  <rect y="318" width="600" height="62" fill="#0f2f33"/>
+  <g transform="translate(150,300)">
+    <circle cx="0" cy="-60" r="16" fill="#f2c9a0"/>
+    <path d="M-26 40 q0 -80 26 -80 q26 0 26 80z" fill="#e8a33d"/>
+  </g>
+  <g transform="translate(225,305)">
+    <circle cx="0" cy="-60" r="16" fill="#f2c9a0"/>
+    <path d="M-26 40 q0 -80 26 -80 q26 0 26 80z" fill="#ffffff"/>
+  </g>
+  <g transform="translate(300,298)">
+    <circle cx="0" cy="-60" r="16" fill="#f2c9a0"/>
+    <path d="M-26 40 q0 -80 26 -80 q26 0 26 80z" fill="#c8842a"/>
+  </g>
+  <g transform="translate(375,305)">
+    <circle cx="0" cy="-60" r="16" fill="#f2c9a0"/>
+    <path d="M-26 40 q0 -80 26 -80 q26 0 26 80z" fill="#ffffff"/>
+  </g>
+  <g transform="translate(450,300)">
+    <circle cx="0" cy="-60" r="16" fill="#f2c9a0"/>
+    <path d="M-26 40 q0 -80 26 -80 q26 0 26 80z" fill="#e8a33d"/>
+  </g>
+</svg>

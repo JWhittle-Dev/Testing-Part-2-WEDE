@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport tag: makes the layout scale to the device width on phones/tablets -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Durban Youth Council | Empowering Durban's Youth Since 1966</title>
+  <meta name="description" content="Durban Youth Council is a volunteer-run non-profit empowering Durban's youth through community service. Volunteer, partner, or sponsor a programme.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <!-- Single external stylesheet shared by every page -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- Skip link for keyboard/screen-reader users -->
+  <!-- Skip link: hidden until focused; lets keyboard and screen-reader users jump past the menu -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!--HEADER / NAVIGATION (shared structure across all pages)-->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">Durban <span>Youth</span> Council</a>
+
+      <!-- Hamburger button: shown on small screens only; js/script.js toggles the .open class on the nav -->
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+
+      <!-- Primary navigation: aria-current="page" marks the page the visitor is on -->
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Programmes</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiry.html" class="nav-cta">Volunteer / Sponsor</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN: the unique content of this page. id matches the skip link target -->
+  <main id="main-content">
+
+    <!--HERO SECTION-->
+    <section class="hero">
+      <div class="container hero-grid">
+        <!-- Hero text: main headline (the only h1 on the page), short pitch and two calls to action -->
+        <div class="hero-text">
+          <h1>Empowering Durban's youth since 1966.</h1>
+          <p class="lead">Durban Youth Council is an all-volunteer non-profit connecting young people with the
+            charities, schools and communities that need them most across the eThekwini metro.</p>
+          <div class="cta-row">
+            <a href="enquiry.html" class="btn btn-primary">Become a volunteer</a>
+            <a href="about.html" class="btn btn-outline">Learn our story</a>
+          </div>
+        </div>
+        <!-- Hero image: original SVG illustration (see images/ and the README references). width/height stop layout shift while loading -->
+        <img class="hero-img" src="images/hero-volunteers.svg" width="600" height="380"
+             alt="Illustration of five young volunteers standing together in front of the Durban skyline at sunrise">
+      </div>
+    </section>
+
+    <!--PROGRAMME HIGHLIGHTS: three cards, one per programme. Each links conceptually to the full detail on services.html-->
+    <section>
+      <div class="container">
+        <h2>What we do</h2>
+        <p>For nearly six decades, DYC volunteers have partnered with local charities and under-resourced
+          schools to run three ongoing streams of community service.</p>
+
+        <div class="card-grid">
+          <article class="card">
+            <img class="card-img" src="images/programme-school.svg" width="400" height="260" loading="lazy" alt="Illustration of an open book and pencil">
+            <div class="icon" aria-hidden="true">1</div>
+            <h3>School Support</h3>
+            <p>Weekend tutoring, mentorship and resource drives at under-resourced primary and high schools
+              across Durban.</p>
+          </article>
+          <article class="card">
+            <img class="card-img" src="images/programme-charity.svg" width="400" height="260" loading="lazy" alt="Illustration of a heart held in two hands">
+            <div class="icon" aria-hidden="true">2</div>
+            <h3>Charity Partnerships</h3>
+            <p>Hands-on volunteer days with established local charities, from care homes to shelters.</p>
+          </article>
+          <article class="card">
+            <img class="card-img" src="images/programme-leadership.svg" width="400" height="260" loading="lazy" alt="Illustration of a rising bar chart and a star">
+            <div class="icon" aria-hidden="true">3</div>
+            <h3>Youth Leadership</h3>
+            <p>Workshops that build organisational and leadership skills in the volunteers themselves.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-alt">
+      <div class="container">
+        <h2>A community, in action</h2>
+        <p>Since 1966, DYC has grown from a single Durban chapter project into a city-wide network of
+          volunteers. Here is what that looks like in numbers and in practice.</p>
+        <!-- Facts list: uses a definition list (dl) because each item is a label + value pair -->
+        <dl class="facts">
+          <div><dt>Founded</dt><dd>1966</dd></div>
+          <div><dt>Programme streams</dt><dd>3</dd></div>
+          <div><dt>Venues</dt><dd>2</dd></div>
+          <div><dt>Staffed by</dt><dd>100% volunteers</dd></div>
+        </dl>
+        <!-- figure + figcaption gives the image a semantic caption -->
+        <figure class="media-figure">
+          <img src="images/about-history.svg" width="400" height="260" loading="lazy"
+               alt="Calendar page showing the year 1966, the year Durban Youth Council was founded">
+          <figcaption>Illustration: DYC was founded in 1966 and is still volunteer-run today.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!--GET INVOLVED STRIP: call-to-action band that sends visitors to the enquiry form-->
+    <section class="strip">
+      <div class="container">
+        <h2>Get involved</h2>
+        <p>Whether you want to give your time or support us as an organisation, there's a place for you.</p>
+        <div class="cta-row">
+          <a href="enquiry.html" class="btn btn-primary">Volunteer</a>
+          <a href="enquiry.html" class="btn btn-outline">Become a sponsor</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--FOOTER (shared structure across all pages)-->
+  <footer class="site-footer">
+    <!-- Footer grid: organisation blurb, quick links and contact/social details (same on every page) -->
+    <div class="container footer-grid">
+      <div>
+        <h3>Durban Youth Council</h3>
+        <p>An all-volunteer non-profit serving Durban's youth since 1966.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Programmes</a></li>
+          <li><a href="enquiry.html">Volunteer / Sponsor</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <p>info@durbanyouthcouncil.co.za</p>
+        <ul class="social-links">
+          <li><a href="#" aria-label="Durban Youth Council on Facebook">Facebook</a></li>
+          <li><a href="#" aria-label="Durban Youth Council on Instagram">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 Durban Youth Council. All rights reserved.</p>
+  </footer>
+
+  <!-- Script is loaded last so the page content is parsed before it runs -->
+  <script src="js/script.js"></script>
+</body>
+</html>

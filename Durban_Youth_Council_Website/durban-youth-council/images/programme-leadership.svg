@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="t d">
+  <title id="t">Youth leadership illustration</title>
+  <desc id="d">A rising bar chart and a star representing leadership skills growing over time.</desc>
+  <rect width="400" height="260" rx="14" fill="#164f56"/>
+  <circle cx="200" cy="130" r="82" fill="#ffffff" opacity=".9"/>
+  <rect x="140" y="150" width="26" height="36" fill="#1f6f78"/><rect x="177" y="126" width="26" height="60" fill="#1f6f78"/><rect x="214" y="100" width="26" height="86" fill="#1f6f78"/><path d="M270 76l7 17 18 2-14 12 5 18-16-10-16 10 5-18-14-12 18-2z" fill="#e8a33d" stroke="#1b1b1e" stroke-width="3"/>
+</svg>
